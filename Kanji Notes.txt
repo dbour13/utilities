@@ -1,0 +1,7 @@
+Total Vocab: 8411
+Has Kanji: 7276
+Has Jouyou Kanji only: 6950
+  and contains at least 2 kanji: 4476
+Has Grade School Kanji only: 5092
+  and contains at least 2 kanji: 3424
+ 

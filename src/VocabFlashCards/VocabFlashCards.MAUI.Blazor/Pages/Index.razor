@@ -1,0 +1,27 @@
+﻿@page "/"
+
+@using VocabFlashCards.MAUI.Blazor.Data
+@inject VocabService vocabService
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app. 
+
+@if (loaded)
+{
+    @vocabList[0].Kanji
+}
+
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code {
+    Vocab[] vocabList;
+    bool loaded = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        vocabList = await vocabService.GetVocab();
+        loaded = true;
+    }
+}

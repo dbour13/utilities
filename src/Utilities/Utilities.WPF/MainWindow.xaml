@@ -1,0 +1,31 @@
+﻿<Window x:Class="Utilities.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Utilities.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <GroupBox Header="Clipboard">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0">Convert from clipboard and save back into the clipboard:</TextBlock>
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <Button Content="Cells To JSON" Click="btnClipboardCellsToJSON_Click" Name="btnClipboardCellsToJSON" Margin="5" />
+                    <TextBlock Margin="5">Entity Name:</TextBlock>
+                    <TextBox Margin="5" Width="200" Name="txtClipboardCellsToJSON">Entities</TextBox>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Orientation="Horizontal">
+                    <Button Content="JSON to C# Class (with values)" Click="btnClipboardJSONtoCSharpClassWithData_Click" Name="btnClipboardJSONtoCSharpClassWithData"></Button>
+                    <TextBlock Margin="5">Class Name:</TextBlock>
+                    <TextBox Margin="5" Width="200" Name="txtClipboardJSONtoCSharpClassWithData">MyClass</TextBox>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
